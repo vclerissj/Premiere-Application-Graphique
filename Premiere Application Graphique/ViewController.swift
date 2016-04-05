@@ -10,9 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var pullDownButtonClass: NSPopUpButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +23,9 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    @IBAction func PullDownButtonChange(sender: AnyObject) {
+        
+    }
 }
 
