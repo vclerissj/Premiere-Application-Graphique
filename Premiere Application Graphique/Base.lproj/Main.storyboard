@@ -673,26 +673,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSA-eO-cFc">
-                                <rect key="frame" x="119" y="184" width="76" height="26"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rwL-BK-gCk" id="J8q-Lh-jpY">
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSA-eO-cFc" userLabel="Joueur1">
+                                <rect key="frame" x="104" y="189" width="104" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Guerrier" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rwL-BK-gCk" id="J8q-Lh-jpY">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="2zw-8n-Dql">
                                         <items>
-                                            <menuItem title="Item 1" state="on" id="rwL-BK-gCk"/>
-                                            <menuItem title="Item 2" id="OkI-uF-6jM"/>
-                                            <menuItem title="Item 3" id="hea-zZ-wmQ"/>
+                                            <menuItem title="Guerrier" state="on" id="rwL-BK-gCk" userLabel="Guerrier"/>
+                                            <menuItem title="Mage" id="OkI-uF-6jM" userLabel="Mage"/>
+                                            <menuItem title="Archer" id="hea-zZ-wmQ" userLabel="Archer"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="test:" target="XfG-lQ-9wD" id="F6V-9c-9Et"/>
+                                </connections>
                             </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mln-cy-7rg" userLabel="Joueur2">
+                                <rect key="frame" x="277" y="189" width="104" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="xaZ-og-zFv">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="IrQ-O3-3Dr">
+                                        <items>
+                                            <menuItem title="Mage" keyEquivalent="" id="S79-eV-lMd" userLabel="Mage">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Guerrier" id="NRg-nK-7cI" userLabel="Guerrier">
+                                                <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
+                                            </menuItem>
+                                            <menuItem title="Archer" keyEquivalent="" id="7cn-Xa-ald" userLabel="Archer">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="popUpClassJoueur2:" target="XfG-lQ-9wD" id="IVg-7B-W5T"/>
+                                </connections>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duC-fA-0eG">
+                                <rect key="frame" x="163" y="40" width="154" height="32"/>
+                                <buttonCell key="cell" type="push" title="Lancer la partie" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hwF-vr-5Jh" userLabel="Lancer la partie">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="XfG-lQ-9wD" id="x1d-b0-cmu"/>
+                                    <segue destination="EtS-7N-dy8" kind="show" id="SLw-Kd-3JD"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="popUpClassJoueur1" destination="KSA-eO-cFc" id="b8h-Uj-lri"/>
+                        <outlet property="popUpClassJoueur2" destination="Mln-cy-7rg" id="GxP-wU-7J8"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="66" y="682"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="0Px-Ug-KWb">
+            <objects>
+                <viewController id="EtS-7N-dy8" customClass="GameViewController" customModule="Premiere_Application_Graphique" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Gc0-EF-J6m">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQY-yA-3ea">
+                                <rect key="frame" x="184" y="13" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quitter" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zxn-VZ-5t1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Quitter:" target="EtS-7N-dy8" id="JjK-wd-RSX"/>
+                                    <segue destination="XfG-lQ-9wD" kind="show" id="Ofp-aE-mtd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="73i-XT-0Pn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="682"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ofp-aE-mtd"/>
+    </inferredMetricsTieBreakers>
 </document>

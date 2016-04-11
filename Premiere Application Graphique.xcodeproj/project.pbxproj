@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF100D1D1CB7D6130042FBAD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF100D1C1CB7D6130042FBAD /* GameViewController.swift */; };
 		BFD02F791CB3AFF100850746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD02F781CB3AFF100850746 /* AppDelegate.swift */; };
 		BFD02F7B1CB3AFF100850746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD02F7A1CB3AFF100850746 /* ViewController.swift */; };
 		BFD02F7D1CB3AFF100850746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD02F7C1CB3AFF100850746 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF100D1C1CB7D6130042FBAD /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BFD02F751CB3AFF100850746 /* Premiere Application Graphique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premiere Application Graphique.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD02F781CB3AFF100850746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD02F7A1CB3AFF100850746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 		BFD02F6C1CB3AFF100850746 = {
 			isa = PBXGroup;
 			children = (
+				BF100D1C1CB7D6130042FBAD /* GameViewController.swift */,
 				BFD02F771CB3AFF100850746 /* Premiere Application Graphique */,
 				BFD02F761CB3AFF100850746 /* Products */,
 			);
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF100D1D1CB7D6130042FBAD /* GameViewController.swift in Sources */,
 				BFD02F7B1CB3AFF100850746 /* ViewController.swift in Sources */,
 				BFD02F791CB3AFF100850746 /* AppDelegate.swift in Sources */,
 				BFD02F881CB3B29100850746 /* Class.swift in Sources */,
@@ -279,6 +283,7 @@
 				BFD02F861CB3AFF100850746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
